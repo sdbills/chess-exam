@@ -13,12 +13,10 @@ public abstract class PieceMovesCalculator {
       if (move.isValid()) {
           if (board.getPiece(move.getEndPosition()) == null) {
               return true;
-          } else if (board.getPiece(move.getStartPosition()) != null &&
+          } else return board.getPiece(move.getStartPosition()) != null &&
                   board.getPiece(move.getStartPosition()).getTeamColor() !=
-                          board.getPiece(move.getEndPosition()).getTeamColor()) {
-              return true;
-          }
+                          board.getPiece(move.getEndPosition()).getTeamColor();
       }
       return false;
-    };
+    }
 }
