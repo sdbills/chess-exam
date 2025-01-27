@@ -10,8 +10,8 @@ import java.util.Collection;
 public class QueenMovesCalculator extends PieceMovesCalculator{
     @Override
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition position) {
-        var moves = new ArrayList<ChessMove>();
-
+        var moves = new BishopMovesCalculator().pieceMoves(board,position);
+        moves.addAll(new RookMovesCalculator().pieceMoves(board,position));
         return moves;
     }
 }
