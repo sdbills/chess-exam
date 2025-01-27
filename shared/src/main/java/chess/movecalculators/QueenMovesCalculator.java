@@ -4,12 +4,14 @@ import chess.ChessBoard;
 import chess.ChessMove;
 import chess.ChessPosition;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 public class QueenMovesCalculator extends PieceMovesCalculator{
     @Override
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition position) {
-        return List.of();
+        var moves = new ArrayList<ChessMove>();
+
+        return moves;
     }
 }
